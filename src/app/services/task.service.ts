@@ -27,6 +27,8 @@ export class TaskService {
 
   addTask(task: Task) {
 
+    task.id = this.tasks.length +1;
+
     this.tasks.push(task);
 
     this.saveToLocalStorage();
@@ -40,7 +42,7 @@ export class TaskService {
   }
 
   removeTask(task: Task) {
-    const index = this.tasks.indexOf(task);]
+    const index = this.tasks.indexOf(task);
 
     if (index !== -1) {
 
